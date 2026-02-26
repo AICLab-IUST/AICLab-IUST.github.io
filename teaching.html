@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching - AIC Lab</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* Specific Styles for the Teaching Page */
+        .teaching-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .course-category {
+            margin-bottom: 3rem;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Grid Layout for Course Cards */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Individual Course Card */
+        .course-card {
+            background: #fff;
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none; /* Remove underline from links */
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        /* Course Logo/Icon Styling */
+        .course-logo {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+        
+        /* If you don't have an image yet, this styles the font-icon placeholder */
+        .course-icon-placeholder {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .course-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-code {
+            font-size: 0.9rem;
+            color: #666;
+            background: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="Images/logo.png" alt="AIC Lab Logo" class="logo-img">
+                AICLab</span>
+            </a>
+            
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="teaching.html" class="active">Teaching</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <section class="teaching-intro">
+            <h1>Academic Courses</h1>
+            <p>
+                The following courses are held at the <strong>Iran University of Science and Technology (IUST)</strong> and are provided by the <strong>AIC Lab</strong> team. 
+                We are dedicated to bridging the gap between theoretical control systems and modern artificial intelligence applications.
+            </p>
+        </section>
+
+        <!-- Graduate Courses Section -->
+        <section class="course-category">
+            <h2 class="category-title">Graduate Courses</h2>
+            <div class="course-grid">
+                
+                <!-- Course 1: RL (This one links to your existing page) -->
+                <a href="courses/rlincontrol.html" class="course-card">
+                    <!-- <i class="fas fa-robot course-icon-placeholder"></i> -->
+                    <img src="Images/logo.jpeg" alt="RL Logo" class="course-logo">
+                    <h3 class="course-title">Reinforcement Learning in Control</h3>
+                    <span class="course-code">Graduate Level</span>
+                </a>
+
+                <!-- Course 2: MPC -->
+                <a href="courses/mpc.html" class="course-card">
+                    <i class="fas fa-chart-line course-icon-placeholder"></i>
+                    <h3 class="course-title">Model Predictive Control</h3>
+                    <span class="course-code">Graduate Level</span>
+                </a>
+
+                <!-- Course 3: Convex Optimization -->
+                <a href="courses/convex.html" class="course-card">
+                    <i class="fas fa-shapes course-icon-placeholder"></i>
+                    <h3 class="course-title">Convex Optimization</h3>
+                    <span class="course-code">Graduate Level</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Undergraduate Courses Section -->
+        <section class="course-category">
+            <h2 class="category-title">Undergraduate Courses</h2>
+            <div class="course-grid">
+                
+                <!-- Course 4: Linear Control -->
+                <a href="courses/linear-control.html" class="course-card">
+                    <i class="fas fa-wave-square course-icon-placeholder"></i>
+                    <h3 class="course-title">Linear Control Systems</h3>
+                    <span class="course-code">Undergraduate Level</span>
+                </a>
+
+                <!-- Course 5: Mechatronics -->
+                <a href="courses/mechatronics.html" class="course-card">
+                    <i class="fas fa-cogs course-icon-placeholder"></i>
+                    <h3 class="course-title">Principles of Mechatronics</h3>
+                    <span class="course-code">Undergraduate Level</span>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 AI and Control Research Laboratory</p>
+        <p>Iran University of Science and Technology, Tehran</p>
+        <div style="margin-top: 10px;">
+            <a href="https://github.com/AICLab-IUST" style="margin-left: 10px;"><i class="fab fa-github"></i></a>
+            <a href="#" style="margin-left: 10px;"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
